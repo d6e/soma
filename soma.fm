@@ -1,0 +1,19 @@
+#!/bin/bash
+url=""
+case "$1" in
+    cliqhop)
+        url="http://uwstream2.somafm.com:8950"
+        ;;
+    defcon)
+        url="http://uwstream3.somafm.com:6202"
+        ;;
+    groovesalad)
+        url="http://uwstream1.somafm.com:80"
+        ;;
+    *)
+        echo $"Usage: $0 {cliqhop | defcon | groovesalad}"
+        exit 1
+esac
+
+mplayer $url
+
